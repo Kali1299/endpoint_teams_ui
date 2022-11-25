@@ -2,13 +2,14 @@ import 'dart:collection';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:endpoint_teams_ui/model/invite_list.dart';
+import 'package:endpoint_teams_ui/model/login_response.dart';
+import 'package:endpoint_teams_ui/model/send_invite.dart';
 import 'package:http/http.dart';
 import 'package:http/io_client.dart';
 
-import '../Modal/invite_list.dart';
-import '../Modal/login_response.dart';
-import '../Modal/send_invite.dart';
 import 'api_constants.dart';
+
 
 
 enum Method { POST, GET, PUT, PATCH, DELETE }

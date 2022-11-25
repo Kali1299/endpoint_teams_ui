@@ -1,6 +1,6 @@
-import 'package:endpoint_teams_ui/helper/app_color.dart';
 import 'package:flutter/material.dart';
 
+import '../helper/app_color.dart';
 import '../helper/font_style.dart';
 
 class Chat extends StatelessWidget {

@@ -1,4 +1,6 @@
-import '../../Modal/invite_list.dart';
+
+
+import 'package:endpoint_teams_ui/model/invite_list.dart';
 
 enum AuthState { UNAUTH, PROCESSING, SUCCESS, FAILED }
 

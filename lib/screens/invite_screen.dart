@@ -1,15 +1,15 @@
 import 'dart:collection';
 
-import 'package:endpoint_teams_ui/BlocHelper/InviteBloc/invite_cubit.dart';
-import 'package:endpoint_teams_ui/BlocHelper/InviteBloc/invite_state.dart';
-import 'package:endpoint_teams_ui/custom_widget/text_field_widget.dart';
 import 'package:endpoint_teams_ui/helper/app_color.dart';
 import 'package:endpoint_teams_ui/helper/nav_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../bloc/invite_bloc/invite_cubit.dart';
+import '../bloc/invite_bloc/invite_state.dart';
 import '../helper/font_style.dart';
+import '../widgets/text_field_widget.dart';
 
 class InviteScreen extends StatelessWidget {
   InviteScreen({Key? key}) : super(key: key);

@@ -1,14 +1,14 @@
-import 'package:endpoint_teams_ui/BlocHelper/InviteBloc/invite_cubit.dart';
-import 'package:endpoint_teams_ui/BlocHelper/InviteBloc/invite_state.dart';
-import 'package:endpoint_teams_ui/Modal/invite_list.dart';
-import 'package:endpoint_teams_ui/helper/app_color.dart';
+import 'package:endpoint_teams_ui/bloc/invite_bloc/invite_cubit.dart';
+import 'package:endpoint_teams_ui/bloc/invite_bloc/invite_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:shimmer/shimmer.dart';
-
+import '../model/invite_list.dart';
+import '../helper/app_color.dart';
 import '../helper/font_style.dart';
 import '../helper/nav_helper.dart';
+import '../model/invite_list.dart';
 
 class Contacts extends StatelessWidget {
   Contacts({Key? key}) : super(key: key);
@@ -75,7 +75,6 @@ class Contacts extends StatelessWidget {
             ),
           ),
         );
-
       },
     );
   }
@@ -240,10 +239,9 @@ class Contacts extends StatelessWidget {
                               itemCount:
                                   state.inviteList?.data?.invites?.length,
                               shrinkWrap: true,
-                              itemBuilder: (BuildContext, int index) {
+                              itemBuilder: (_, int index) {
                                 Invites invites =
-                                    state.inviteList?.data?.invites?[index] ??
-                                        Invites();
+                                    state.inviteList?.data?.invites?[index]??Invites();
                                 return Padding(
                                   padding: const EdgeInsets.only(top: 10),
                                   child: Container(

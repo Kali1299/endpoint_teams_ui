@@ -1,11 +1,11 @@
-import 'package:endpoint_teams_ui/ApiHelper/api_helper.dart';
-import 'package:endpoint_teams_ui/BlocHelper/InviteBloc/invite_cubit.dart';
-import 'package:endpoint_teams_ui/BlocHelper/InviteBloc/invite_state.dart';
+
+
 import 'package:endpoint_teams_ui/screens/teams.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-
+import '../bloc/invite_bloc/invite_cubit.dart';
+import '../bloc/invite_bloc/invite_state.dart';
 import '../helper/app_color.dart';
 import 'chat.dart';
 import 'contacts.dart';
@@ -14,8 +14,8 @@ import 'loans.dart';
 
 class DashBoard extends StatelessWidget {
   DashBoard({Key? key}) : super(key: key);
-  final _pageController = PageController(initialPage: 0);
-  final _valueNotifier = ValueNotifier<int>(0);
+  final _pageController = PageController(initialPage: 2);
+  final _valueNotifier = ValueNotifier<int>(2);
 
   void _onItemTapped(int index) async {
     _valueNotifier.value = index;
